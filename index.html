@@ -12,6 +12,7 @@
             --bg-tertiary: #1a1a25;
             --bg-card: #16161f;
             --border: #2a2a3a;
+            --border-subtle: #1f1f2a;
             --text-primary: #f0f0f5;
             --text-secondary: #a0a0b0;
             --text-muted: #606070;
@@ -26,6 +27,29 @@
             --gradient-card: linear-gradient(180deg, rgba(168, 85, 247, 0.05) 0%, transparent 100%);
             --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
             --shadow-purple: 0 0 40px rgba(168, 85, 247, 0.15);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8f9fa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f3f5;
+            --bg-card: #ffffff;
+            --border: #dee2e6;
+            --border-subtle: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #495057;
+            --text-muted: #6c757d;
+            --accent-cyan: #0891b2;
+            --accent-purple: #9333ea;
+            --accent-pink: #db2777;
+            --accent-green: #059669;
+            --accent-orange: #ea580c;
+            --accent-red: #dc2626;
+            --accent-blue: #2563eb;
+            --gradient-cyber: linear-gradient(135deg, #0891b2 0%, #9333ea 50%, #db2777 100%);
+            --gradient-card: linear-gradient(180deg, rgba(147, 51, 234, 0.05) 0%, transparent 100%);
+            --shadow-glow: 0 0 40px rgba(8, 145, 178, 0.1);
+            --shadow-purple: 0 0 40px rgba(147, 51, 234, 0.1);
         }
 
         * {
@@ -1631,13 +1655,15 @@
     <header class="header">
         <div class="header-content">
             <div class="logo">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAYcSURBVHgB7ZtbbBRVHMZ/Z3a7t+22bKEttKWlQCkXuRZBLiJeEhMTEzWKiYkvJj74gC8++OaDiYk++OCDD75oYrwkxkSDGjVGjSYqRkWQi0C5tFBKS0u77W53d3Zm/N+ZmXZ3O7uzs7vdzSb9kiaz5+zszvf/nfOdM2dmAQRBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEATh/0dAlg6HQ15sQm5VF
-+wHh2EAq9EFQK7UG+wBL7sBvQtq7YV6+wwcPtyHQqHwd1tbOwIAAAAA" alt="Cyberdelic Nexus Logo" style="width: 48px; height: 48px; border-radius: 50%; box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);">
+                <div class="logo-icon" style="background: linear-gradient(135deg, #00d4ff 0%, #a855f7 50%, #ec4899 100%); box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);">CN</div>
                 <div>
                     <div class="logo-text">Cyberdelic Nexus</div>
                     <div class="logo-subtitle">Financial Matrix</div>
                 </div>
             </div>
+            <button id="theme-toggle" style="background: var(--bg-card); border: 1px solid var(--border); color: var(--text-primary); padding: 0.5rem 0.75rem; border-radius: 8px; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s;" title="Toggle theme">
+                <span id="theme-icon">🌙</span>
+            </button>
             <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
                 <div class="hamburger-icon" id="hamburger-icon">
                     <span></span>
@@ -2078,6 +2104,22 @@
                     <div class="hero-stat">
                         <div class="hero-stat-value">8.6x</div>
                         <div class="hero-stat-label">Target Return</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+                    <div style="flex: 1; max-width: 300px;">
+                        <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Investor Pitch Link</label>
+                        <input type="url" id="pitch-deck-link" class="input-field" placeholder="https://yourpitch.com/deck" value="" style="margin-bottom: 0.5rem;">
+                        <a href="#" id="pitch-deck-button" class="btn-primary" style="display: inline-block; width: 100%; text-align: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s;">
+                            📊 View Investor Pitch
+                        </a>
+                    </div>
+                    <div style="flex: 1; max-width: 300px;">
+                        <label style="display: block; font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Book Meeting Link</label>
+                        <input type="url" id="meeting-link" class="input-field" placeholder="https://cal.com/yourmeeting" value="" style="margin-bottom: 0.5rem;">
+                        <a href="#" id="meeting-button" class="btn-primary" style="display: inline-block; width: 100%; text-align: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-pink) 100%); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; transition: transform 0.2s;">
+                            📅 Book a Meeting
+                        </a>
                     </div>
                 </div>
             </div>
@@ -4587,6 +4629,74 @@
             console.log('✅ Mobile hamburger menu connected');
         } else {
             console.error('❌ Hamburger menu elements not found!', { hamburgerBtn, navTabs });
+        }
+
+        // ============================================
+        // THEME TOGGLE
+        // ============================================
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        if (savedTheme === 'light') {
+            html.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '☀️';
+        }
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+
+                themeIcon.textContent = newTheme === 'light' ? '☀️' : '🌙';
+
+                console.log('🎨 Theme switched to:', newTheme);
+            });
+            console.log('✅ Theme toggle connected');
+        }
+
+        // ============================================
+        // ELEVATOR PITCH LINKS
+        // ============================================
+
+        const pitchDeckLinkInput = document.getElementById('pitch-deck-link');
+        const meetingLinkInput = document.getElementById('meeting-link');
+        const pitchDeckButton = document.getElementById('pitch-deck-button');
+        const meetingButton = document.getElementById('meeting-button');
+
+        // Update button hrefs when inputs change
+        if (pitchDeckLinkInput && pitchDeckButton) {
+            pitchDeckLinkInput.addEventListener('input', () => {
+                const url = pitchDeckLinkInput.value;
+                pitchDeckButton.href = url || '#';
+                if (url) {
+                    pitchDeckButton.setAttribute('target', '_blank');
+                    pitchDeckButton.setAttribute('rel', 'noopener noreferrer');
+                } else {
+                    pitchDeckButton.removeAttribute('target');
+                    pitchDeckButton.removeAttribute('rel');
+                }
+            });
+        }
+
+        if (meetingLinkInput && meetingButton) {
+            meetingLinkInput.addEventListener('input', () => {
+                const url = meetingLinkInput.value;
+                meetingButton.href = url || '#';
+                if (url) {
+                    meetingButton.setAttribute('target', '_blank');
+                    meetingButton.setAttribute('rel', 'noopener noreferrer');
+                } else {
+                    meetingButton.removeAttribute('target');
+                    meetingButton.removeAttribute('rel');
+                }
+            });
         }
 
         // Normalize all revenue cell formatting on load
