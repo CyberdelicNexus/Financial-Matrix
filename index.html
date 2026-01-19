@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberdelic Nexus | Investor Portal</title>
+    <title>Cyberdelic Nexus | Financial Matrix</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -1631,10 +1631,11 @@
     <header class="header">
         <div class="header-content">
             <div class="logo">
-                <div class="logo-icon">CN</div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAYcSURBVHgB7ZtbbBRVHMZ/Z3a7t+22bKEttKWlQCkXuRZBLiJeEhMTEzWKiYkvJj74gC8++OaDiYk++OCDD75oYrwkxkSDGjVGjSYqRkWQi0C5tFBKS0u77W53d3Zm/N+ZmXZ3O7uzs7vdzSb9kiaz5+zszvf/nfOdM2dmAQRBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEATh/0dAlg6HQ15sQm5VF
++wHh2EAq9EFQK7UG+wBL7sBvQtq7YV6+wwcPtyHQqHwd1tbOwIAAAAA" alt="Cyberdelic Nexus Logo" style="width: 48px; height: 48px; border-radius: 50%; box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);">
                 <div>
                     <div class="logo-text">Cyberdelic Nexus</div>
-                    <div class="logo-subtitle">Investor Portal</div>
+                    <div class="logo-subtitle">Financial Matrix</div>
                 </div>
             </div>
             <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
@@ -2820,33 +2821,47 @@
                         </div>
                     </div>
 
-                    <div class="input-group">
-                        <label class="input-label">Salaries & Contractors</label>
-                        <input type="number" class="input-field fixed-cost" value="12000">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Office / Coworking</label>
-                        <input type="number" class="input-field fixed-cost" value="1500">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Software & Tools</label>
-                        <input type="number" class="input-field fixed-cost" value="1200">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Insurance</label>
-                        <input type="number" class="input-field fixed-cost" value="400">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Legal & Accounting</label>
-                        <input type="number" class="input-field fixed-cost" value="800">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Estonian OU Maintenance</label>
-                        <input type="number" class="input-field fixed-cost" value="200">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">US LLC Costs</label>
-                        <input type="number" class="input-field fixed-cost" value="100">
+                    <div style="display: grid; gap: 0.5rem;">
+                        <div id="fixed-costs-list">
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field fixed-cost-name" value="Salaries & Contractors" placeholder="Cost name">
+                                <input type="number" class="input-field fixed-cost-value" value="12000" placeholder="$">
+                                <button class="btn-icon remove-fixed-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field fixed-cost-name" value="Office / Coworking" placeholder="Cost name">
+                                <input type="number" class="input-field fixed-cost-value" value="1500" placeholder="$">
+                                <button class="btn-icon remove-fixed-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field fixed-cost-name" value="Software & Tools" placeholder="Cost name">
+                                <input type="number" class="input-field fixed-cost-value" value="1200" placeholder="$">
+                                <button class="btn-icon remove-fixed-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field fixed-cost-name" value="Insurance" placeholder="Cost name">
+                                <input type="number" class="input-field fixed-cost-value" value="400" placeholder="$">
+                                <button class="btn-icon remove-fixed-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field fixed-cost-name" value="Legal & Accounting" placeholder="Cost name">
+                                <input type="number" class="input-field fixed-cost-value" value="800" placeholder="$">
+                                <button class="btn-icon remove-fixed-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field fixed-cost-name" value="Estonian OU Maintenance" placeholder="Cost name">
+                                <input type="number" class="input-field fixed-cost-value" value="200" placeholder="$">
+                                <button class="btn-icon remove-fixed-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field fixed-cost-name" value="US LLC Costs" placeholder="Cost name">
+                                <input type="number" class="input-field fixed-cost-value" value="100" placeholder="$">
+                                <button class="btn-icon remove-fixed-cost" title="Remove">&#10005;</button>
+                            </div>
+                        </div>
+                        <div class="add-course-row">
+                            <button class="btn-icon add" id="add-fixed-cost" title="Add Fixed Cost">+</button>
+                        </div>
                     </div>
 
                     <div class="summary-row">
@@ -2863,25 +2878,37 @@
                         </div>
                     </div>
 
-                    <div class="input-group">
-                        <label class="input-label">Marketing & Ads</label>
-                        <input type="number" class="input-field variable-cost" value="4000">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Event Production</label>
-                        <input type="number" class="input-field variable-cost" value="2500">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Content Creation</label>
-                        <input type="number" class="input-field variable-cost" value="1500">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">Travel</label>
-                        <input type="number" class="input-field variable-cost" value="1500">
-                    </div>
-                    <div class="input-group">
-                        <label class="input-label">R&D / Prototyping</label>
-                        <input type="number" class="input-field variable-cost" value="2300">
+                    <div style="display: grid; gap: 0.5rem;">
+                        <div id="variable-costs-list">
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field variable-cost-name" value="Marketing & Ads" placeholder="Cost name">
+                                <input type="number" class="input-field variable-cost-value" value="4000" placeholder="$">
+                                <button class="btn-icon remove-variable-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field variable-cost-name" value="Event Production" placeholder="Cost name">
+                                <input type="number" class="input-field variable-cost-value" value="2500" placeholder="$">
+                                <button class="btn-icon remove-variable-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field variable-cost-name" value="Content Creation" placeholder="Cost name">
+                                <input type="number" class="input-field variable-cost-value" value="1500" placeholder="$">
+                                <button class="btn-icon remove-variable-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field variable-cost-name" value="Travel" placeholder="Cost name">
+                                <input type="number" class="input-field variable-cost-value" value="1500" placeholder="$">
+                                <button class="btn-icon remove-variable-cost" title="Remove">&#10005;</button>
+                            </div>
+                            <div class="cost-item" style="display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                                <input type="text" class="input-field variable-cost-name" value="R&D / Prototyping" placeholder="Cost name">
+                                <input type="number" class="input-field variable-cost-value" value="2300" placeholder="$">
+                                <button class="btn-icon remove-variable-cost" title="Remove">&#10005;</button>
+                            </div>
+                        </div>
+                        <div class="add-course-row">
+                            <button class="btn-icon add" id="add-variable-cost" title="Add Variable Cost">+</button>
+                        </div>
                     </div>
 
                     <div class="summary-row">
@@ -3165,12 +3192,12 @@
 
         function updateOperationsCalcs() {
             let fixedTotal = 0;
-            document.querySelectorAll('.fixed-cost').forEach(input => {
+            document.querySelectorAll('.fixed-cost-value').forEach(input => {
                 fixedTotal += parseFloat(input.value) || 0;
             });
 
             let variableTotal = 0;
-            document.querySelectorAll('.variable-cost').forEach(input => {
+            document.querySelectorAll('.variable-cost-value').forEach(input => {
                 variableTotal += parseFloat(input.value) || 0;
             });
 
@@ -3383,6 +3410,98 @@
 
         document.getElementById('add-event').addEventListener('click', addEvent);
         attachEventRemoveListeners();
+
+        // Fixed Cost management
+        let fixedCostIdCounter = 8;
+
+        function addFixedCost() {
+            const costList = document.getElementById('fixed-costs-list');
+            const newCost = document.createElement('div');
+            newCost.className = 'cost-item';
+            newCost.dataset.costId = fixedCostIdCounter++;
+            newCost.style.cssText = 'display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;';
+            newCost.innerHTML = `
+                <input type="text" class="input-field fixed-cost-name" value="New Cost" placeholder="Cost name">
+                <input type="number" class="input-field fixed-cost-value" value="0" placeholder="$">
+                <button class="btn-icon remove-fixed-cost" title="Remove">&#10005;</button>
+            `;
+            costList.appendChild(newCost);
+            attachFixedCostListeners();
+            attachFixedCostRemoveListeners();
+            updateOperationsCalcs();
+        }
+
+        function removeFixedCost(e) {
+            const costItem = e.target.closest('.cost-item');
+            if (document.querySelectorAll('#fixed-costs-list .cost-item').length > 1) {
+                costItem.remove();
+                updateOperationsCalcs();
+            }
+        }
+
+        function attachFixedCostListeners() {
+            document.querySelectorAll('.fixed-cost-name, .fixed-cost-value').forEach(input => {
+                input.removeEventListener('input', updateOperationsCalcs);
+                input.addEventListener('input', updateOperationsCalcs);
+            });
+        }
+
+        function attachFixedCostRemoveListeners() {
+            document.querySelectorAll('.remove-fixed-cost').forEach(btn => {
+                btn.removeEventListener('click', removeFixedCost);
+                btn.addEventListener('click', removeFixedCost);
+            });
+        }
+
+        document.getElementById('add-fixed-cost').addEventListener('click', addFixedCost);
+        attachFixedCostListeners();
+        attachFixedCostRemoveListeners();
+
+        // Variable Cost management
+        let variableCostIdCounter = 6;
+
+        function addVariableCost() {
+            const costList = document.getElementById('variable-costs-list');
+            const newCost = document.createElement('div');
+            newCost.className = 'cost-item';
+            newCost.dataset.costId = variableCostIdCounter++;
+            newCost.style.cssText = 'display: grid; grid-template-columns: 2fr 1fr 0.5fr; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;';
+            newCost.innerHTML = `
+                <input type="text" class="input-field variable-cost-name" value="New Cost" placeholder="Cost name">
+                <input type="number" class="input-field variable-cost-value" value="0" placeholder="$">
+                <button class="btn-icon remove-variable-cost" title="Remove">&#10005;</button>
+            `;
+            costList.appendChild(newCost);
+            attachVariableCostListeners();
+            attachVariableCostRemoveListeners();
+            updateOperationsCalcs();
+        }
+
+        function removeVariableCost(e) {
+            const costItem = e.target.closest('.cost-item');
+            if (document.querySelectorAll('#variable-costs-list .cost-item').length > 1) {
+                costItem.remove();
+                updateOperationsCalcs();
+            }
+        }
+
+        function attachVariableCostListeners() {
+            document.querySelectorAll('.variable-cost-name, .variable-cost-value').forEach(input => {
+                input.removeEventListener('input', updateOperationsCalcs);
+                input.addEventListener('input', updateOperationsCalcs);
+            });
+        }
+
+        function attachVariableCostRemoveListeners() {
+            document.querySelectorAll('.remove-variable-cost').forEach(btn => {
+                btn.removeEventListener('click', removeVariableCost);
+                btn.addEventListener('click', removeVariableCost);
+            });
+        }
+
+        document.getElementById('add-variable-cost').addEventListener('click', addVariableCost);
+        attachVariableCostListeners();
+        attachVariableCostRemoveListeners();
 
         // Course management
         let courseIdCounter = 4;
@@ -3617,6 +3736,26 @@
             });
             data.events = events;
 
+            // Save fixed costs
+            const fixedCosts = [];
+            document.querySelectorAll('#fixed-costs-list .cost-item').forEach(costItem => {
+                fixedCosts.push({
+                    name: costItem.querySelector('.fixed-cost-name').value,
+                    value: costItem.querySelector('.fixed-cost-value').value
+                });
+            });
+            data.fixedCosts = fixedCosts;
+
+            // Save variable costs
+            const variableCosts = [];
+            document.querySelectorAll('#variable-costs-list .cost-item').forEach(costItem => {
+                variableCosts.push({
+                    name: costItem.querySelector('.variable-cost-name').value,
+                    value: costItem.querySelector('.variable-cost-value').value
+                });
+            });
+            data.variableCosts = variableCosts;
+
             localStorage.setItem('cyberdelicCFOData', JSON.stringify(data));
             console.log('Data saved at', data.lastSaved);
         }
@@ -3779,9 +3918,41 @@
                     });
                 }
 
+                // Restore fixed costs
+                if (data.fixedCosts && data.fixedCosts.length > 0) {
+                    const fixedCostsList = document.getElementById('fixed-costs-list');
+                    fixedCostsList.innerHTML = '';
+                    data.fixedCosts.forEach(cost => {
+                        addFixedCost();
+                        const lastCost = fixedCostsList.querySelector('.cost-item:last-child');
+                        if (lastCost) {
+                            lastCost.querySelector('.fixed-cost-name').value = cost.name;
+                            lastCost.querySelector('.fixed-cost-value').value = cost.value;
+                        }
+                    });
+                }
+
+                // Restore variable costs
+                if (data.variableCosts && data.variableCosts.length > 0) {
+                    const variableCostsList = document.getElementById('variable-costs-list');
+                    variableCostsList.innerHTML = '';
+                    data.variableCosts.forEach(cost => {
+                        addVariableCost();
+                        const lastCost = variableCostsList.querySelector('.cost-item:last-child');
+                        if (lastCost) {
+                            lastCost.querySelector('.variable-cost-name').value = cost.name;
+                            lastCost.querySelector('.variable-cost-value').value = cost.value;
+                        }
+                    });
+                }
+
                 // Recalculate all values after loading
                 attachRevenueListeners();
                 attachEventRemoveListeners();
+                attachFixedCostListeners();
+                attachFixedCostRemoveListeners();
+                attachVariableCostListeners();
+                attachVariableCostRemoveListeners();
                 handleRevenueInput();
                 updateCapitalCalcs();
                 updateSafeEquityCalcs();
